@@ -6,7 +6,7 @@ export const AddMovie = props => {
     title: "",
     director: "",
     metascore: "",
-    stars: [],
+    stars: []
   });
 
   const handleChange = event => {
@@ -41,18 +41,18 @@ export const AddMovie = props => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="addmovie">
         <label>Movie Title: </label>
-        <input name="title" type="text" onChange={handleChange} />
+        <input name="title" type="text" placeholder="Interstellar" onChange={handleChange} required />
 
         <label>Director: </label>
-        <input name="director" type="text" onChange={handleChange} />
+        <input name="director" type="text" placeholder="Christopher Nolan" onChange={handleChange} required />
 
         <label>Metascore: </label>
-        <input name="metascore" type="text" onChange={handleChange} />
-        
-        <label>Stars: </label>
-        <input name="stars" type="text" onChange={handleChange} />
+        <input name="metascore" type="text" placeholder="74" onChange={handleChange} required />
+
+        <label>Stars: (Separate with Commas)</label>
+        <input name="stars" type="text" placeholder="Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine" onChange={handleChange} required />
 
         <button>Add Movie</button>
       </form>
