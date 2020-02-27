@@ -38,6 +38,10 @@ export default class Movie extends React.Component {
     this.props.history.push(`/movies/${this.state.movie.id}/update-movie/`);
   };
 
+  addMovie = () => {
+    this.props.history.push("/add-movie");
+  };
+
   deleteMovie = () => {
     let id = this.state.movie.id;
     axios
@@ -65,6 +69,9 @@ export default class Movie extends React.Component {
         </div>
         <div className="save-button" onClick={this.deleteMovie}>
           Delete Movie
+        </div>
+        <div className="save-button" onClick={this.addMovie}>
+          Add a Movie
         </div>
         <Route
           path="/movies/:id/update-movie/"

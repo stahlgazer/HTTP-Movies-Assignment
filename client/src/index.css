@@ -75,3 +75,23 @@ body {
   color: red;
   text-align: center;
 }
+
+.addmovie {
+  display:flex;
+  flex-direction:column;
+  margin:0 auto;
+  width:50%;
+}
+
+.addmovie label {
+  margin:2% auto;
+}
+
+.addmovie input {
+  margin:2%
+}
+
+.addmovie button {
+  width:20%;
+  margin:0 auto;
+}
